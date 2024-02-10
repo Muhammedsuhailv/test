@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task/View/detailpage.dart';
 import 'package:task/View/login.dart';
 
 class LoginPage extends StatefulWidget {
@@ -83,18 +84,25 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Center(
-              child: Container(
-            alignment: Alignment.center,
-            height: 55,
-            width: 290,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.black),
-            child: Text("Signup",
-                style: GoogleFonts.poppins(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w800,
-                )),
-          )),
+              child: InkWell(onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Products(key: ValueKey('products'))
+                    ));              },
+                child: Container(
+                            alignment: Alignment.center,
+                            height: 55,
+                            width: 290,
+                            decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.black),
+                            child: Text("Signup",
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
+                  )),
+                          ),
+              )),
           const SizedBox(
             height: 8,
           ),
@@ -107,10 +115,10 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SignupPage(),
+                          builder: (context) => LoginPage(),
                         ));
                   },
-                  child: Text(
+                  child: const Text(
                     "Login",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),

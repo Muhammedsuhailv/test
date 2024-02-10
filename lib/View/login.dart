@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task/View/signup.dart';
 
+import 'detailpage.dart';
+
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
 
@@ -83,20 +85,48 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
           Center(
-              child: Container(
-            alignment: Alignment.center,
-            height: 55,
-            width: 290,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.black),
-            child: Text("Login", style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.w800,)),
-          )),
-          const SizedBox(height: 8,),
-           Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-            Text("I have not Accont "),
-            InkWell(onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));},child: Text("SignUp",style: TextStyle(fontWeight: FontWeight.bold),)),
-
-          ],)
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Products(key: ValueKey('products'))
+                      ));
+                },
+                child: Container(
+                            alignment: Alignment.center,
+                            height: 55,
+                            width: 290,
+                            decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.black),
+                            child: Text("Login",
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
+                  )),
+                          ),
+              )),
+          const SizedBox(
+            height: 8,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("I have not Accont "),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignupPage(),
+                        ));
+                  },
+                  child: const Text(
+                    "SignUp",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+            ],
+          )
         ],
       ),
     );
