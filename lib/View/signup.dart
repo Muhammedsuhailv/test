@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:task/View/detailpage.dart';
 import 'package:task/View/login.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     var email = TextEditingController();
@@ -46,10 +46,10 @@ class _LoginPageState extends State<LoginPage> {
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(15))),
+                            BorderRadius.all(Radius.circular(15))),
                         focusedBorder: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(15)))),
+                            BorderRadius.all(Radius.circular(15)))),
                   ),
                   TextFormField(
                     controller: email,
@@ -60,10 +60,10 @@ class _LoginPageState extends State<LoginPage> {
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(15))),
+                            BorderRadius.all(Radius.circular(15))),
                         focusedBorder: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(15)))),
+                            BorderRadius.all(Radius.circular(15)))),
                   ),
                   TextFormField(
                     controller: email,
@@ -74,10 +74,10 @@ class _LoginPageState extends State<LoginPage> {
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(15))),
+                            BorderRadius.all(Radius.circular(15))),
                         focusedBorder: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(15)))),
+                            BorderRadius.all(Radius.circular(15)))),
                   )
                 ],
               ),
@@ -91,17 +91,17 @@ class _LoginPageState extends State<LoginPage> {
                         builder: (context) => const Products(key: ValueKey('products'))
                     ));              },
                 child: Container(
-                            alignment: Alignment.center,
-                            height: 55,
-                            width: 290,
-                            decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.black),
-                            child: Text("Signup",
-                  style: GoogleFonts.poppins(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
-                  )),
-                          ),
+                  alignment: Alignment.center,
+                  height: 55,
+                  width: 290,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10), color: Colors.black),
+                  child: Text("Signup",
+                      style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w800,
+                      )),
+                ),
               )),
           const SizedBox(
             height: 8,
@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginPage(),
+                          builder: (context) => Login(),
                         ));
                   },
                   child: const Text(

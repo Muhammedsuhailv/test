@@ -4,14 +4,14 @@ import 'package:task/View/signup.dart';
 
 import 'detailpage.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<Login> createState() => _LoginState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     var email = TextEditingController();
